@@ -92,3 +92,248 @@ footer {
 #address {
   color: #999;
 }
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* table */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.size table * {
+  border: 1px solid #e4e4e4;
+  font: 12px #555;
+}
+thead {
+  background-color: #fbfbfb;
+}
+
+.bold {
+  font-weight: bold;
+}
+th,
+td {
+  padding: 1em 0;
+}
+.size .seperate {
+  width: 24%;
+}
+.size th:not(.seperate) {
+  width: 19%;
+}
+
+.refund th {
+  font-weight: normal;
+}
+.refund thead,
+tfoot {
+  border-top: 2px solid #a5a5a5;
+  border-bottom: 1px solid #e4e4e4;
+}
+.refund .cost {
+  text-align: right;
+  padding-right: 80px;
+}
+.refund .seperate {
+  width: 33%;
+}
+
+/* form */
+form {
+  border: 1px solid #e4e4e4;
+  background-color: #fbfbfb;
+  padding: 20px;
+}
+form h5 {
+  margin: 20px 0 10px;
+}
+form .input {
+  width: 100%;
+  font-size: 12px;
+  height: 2.5em;
+}
+select {
+  width: 33%;
+  font-size: 12px;
+  height: 2.5em;
+}
+.phone {
+  display: flex;
+  margin-bottom: 10px;
+}
+.phone input[type="button"] {
+  width: 30%;
+  border: 1px solid #08a600;
+  background-color: #4ec53d;
+  font-size: 12px;
+  color: #fff;
+  margin-left: 10px;
+  padding: 0;
+  height: 35px;
+}
+.hobby span {
+  font-size: 12px;
+  margin-right: 69px;
+}
+select,
+textarea {
+  border: 1px solid #e4e4e4;
+}
+textarea {
+  width: 100%;
+}
+input[type="submit"] {
+  border: 1px solid #08a600;
+  background-color: #4ec53d;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  height: 3em;
+  margin-top: 1em;
+}
+
+/* 리스트 */
+.list h5 {
+  margin: 10px 0 10px;
+}
+/* 프로젝트 */
+.project {
+  border: 1px solid #e4e4e4;
+  padding: 20px;
+}
+.project p {
+  font-size: 32px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+.project dt {
+  font-size: 14px;
+  font-weight: bold;
+}
+.project dt span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #559bfa;
+}
+.project dd {
+  margin: 0;
+  font-size: 12px;
+}
+/* 검색 */
+.search {
+  border: 1px solid #e4e4e4;
+  padding: 25px 25px;
+  width: 225px;
+}
+.search ol {
+  padding: 0;
+  margin: 0;
+  counter-reset: count;
+}
+.search li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.search span:hover {
+  text-decoration: underline;
+}
+
+.search li:before {
+  text-align: center;
+  counter-increment: count;
+  content: counter(count);
+  border: 1px solid #e0e0e0;
+  font-size: 10px;
+  color: #666;
+  padding: 3.5px;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+/* 쿠키 */
+.cookie {
+  border: 1px solid #e4e4e4;
+  font-size: 12px;
+}
+.cookie .blue {
+  color: #559bfa;
+  text-decoration: underline;
+}
+.cookie .red {
+  color: #ec5336;
+}
+.cookie li:first-child {
+  font-weight: bold;
+}
+.cookie li:first-child .blue {
+  text-decoration: none;
+}
+.cookie li {
+  margin: 10px 0;
+}
+/* news */
+.news {
+  border: 1px solid #e4e4e4;
+  font-size: 12px;
+  padding: 20px;
+}
+.new a {
+  font-size: 14px;
+  color: #00c !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.newsbox {
+  display: flex;
+  margin-bottom: 10px;
+}
+.newsimg {
+  margin-right: 10px;
+}
+/* webtoon */
+.webtoon {
+  border: 1px solid #e4e4e4;
+  padding: 20px 21px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.webtoon a {
+  text-decoration: none;
+  color: #000;
+}
+.webtoon .toon_title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.webtoon .toon_ch {
+  font-size: 12px;
+  margin-top: 0px;
+}
+.toon:nth-child(2),
+.toon:nth-child(5) {
+  margin: 0 20px;
+}
+.ctoon,
+.stoon {
+  font-size: 10px;
+  color: #fff;
+  font-weight: none;
+  padding: 1px 5px;
+  margin-right: 5px;
+}
+.ctoon {
+  border: 1px solid #71b036;
+  background-color: #80c83d;
+}
+.stoon {
+  border: 1px solid #df4e28;
+  background-color: #ec5336;
+}
+.toon:hover {
+  text-decoration: underline;
+}
