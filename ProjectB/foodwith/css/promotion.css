@@ -1,0 +1,282 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+}
+body div {
+  margin: 0;
+}
+
+.blind {
+  /* 레이아웃에 영향을 끼치지 않도록 */
+  position: absolute;
+  /* 스크린 리더가 읽을 수 있도록 */
+  width: 1px;
+  height: 1px;
+  /* 눈에 보이는 부분을 제거 */
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+}
+
+header {
+  z-index: 5;
+  height: 44px;
+  width: 100%;
+  background: #404040;
+  opacity: 0.75;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+header img {
+  margin: 11px 200px 11px;
+}
+
+section {
+  width: 100%;
+}
+section .invite {
+  background: url(../image/section_invite.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  height: 750px;
+}
+section .creator {
+  background: url(../image/section_creator.jpg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #f9939d;
+  height: 822px;
+}
+section .store {
+  background: url(../image/section_store.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #d5e43f;
+  height: 1084px;
+}
+section .store ul {
+  display: flex;
+  flex-basis: 230px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  width: 980px;
+  height: 740px;
+  margin: auto;
+  padding: 300px 0 0;
+  list-style-type: none;
+}
+section .store ul li {
+  width: 230px;
+  height: 370px;
+}
+section .store ul li .fruit_thumbnail {
+  position: relative;
+  border-radius: 10px;
+  width: 230px;
+  height: 230px;
+  color: #fff;
+}
+section .store ul li .fruit_thumbnail .fruit_image,
+section .store ul li .fruit_thumbnail .fruit_text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+section .store ul li .fruit_thumbnail .fruit_image {
+  z-index: 1;
+}
+section .store ul li .fruit_thumbnail .apple {
+  background: url("../image/thumbnail_apple.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .onion {
+  background: url("../image/thumbnail_onion.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .banana {
+  background: url("../image/thumbnail_banana.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .kiwi {
+  background: url("../image/thumbnail_kiwi.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .broccoli {
+  background: url("../image/thumbnail_broccoli.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .lemon {
+  background: url("../image/thumbnail_lemon.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .garlic {
+  background: url("../image/thumbnail_garlic.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .tomato {
+  background: url("../image/thumbnail_tomato.jpg") no-repeat;
+}
+section .store ul li .fruit_thumbnail .fruit_text {
+  z-index: 2;
+  background-color: #608402;
+  opacity: 0;
+}
+section .store ul li .fruit_thumbnail .fruit_text .sale {
+  margin-top: 60px;
+  display: inline-block;
+  font-size: 65px;
+}
+section .store ul li .fruit_thumbnail .fruit_text .time {
+  display: inline-block;
+  font-size: 20px;
+}
+section .store ul li .fruit_thumbnail .fruit_text:hover, section .store ul li .fruit_thumbnail .fruit_text:focus {
+  opacity: 0.9;
+}
+section .store ul li .item {
+  height: 110px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #1b1d21;
+}
+section .store ul li .item .name {
+  margin-top: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+section .store ul li .item .price {
+  display: block;
+}
+section .store ul li .item .price span {
+  font-size: 28px;
+  font-weight: bold;
+}
+section .recipe {
+  background-color: #b893f9;
+  height: 1030px;
+  text-align: center;
+}
+section .recipe a {
+  position: relative;
+  top: -365px;
+  z-index: 3;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px 25px;
+  border-radius: 10px;
+  color: #000;
+  width: 250px;
+  height: 31px;
+  background-color: #d542e9;
+  cursor: grab;
+}
+section .recipe a:hover {
+  background-color: yellow;
+  color: navy;
+}
+section .recipe .recipe_content {
+  position: relative;
+  z-index: 2;
+  top: -80px;
+  background: url(../image/section_recipe.png) no-repeat;
+  background-position: center;
+  height: 100%;
+}
+section .recipe .recipe_pattern {
+  position: relative;
+  top: -610px;
+  z-index: 1;
+  background-image: url(../image/pattern_recipe.png);
+  height: 185px;
+}
+section .faq {
+  background-color: #fff;
+}
+section .faq .wrap {
+  width: 980px;
+  margin: auto;
+  padding: 50 0 100 0;
+}
+section .faq .wrap h2 {
+  text-align: center;
+  font-size: 40px;
+}
+section .faq .wrap ul {
+  list-style: none;
+  padding: 0;
+}
+section .faq .wrap .faq_box .question_box {
+  border-top: 1px solid #a1a5ad;
+  border-bottom: 1px solid #a1a5ad;
+}
+section .faq .wrap .faq_box .question_box .question,
+section .faq .wrap .faq_box .question_box .answer {
+  display: flex;
+  align-items: flex-start;
+  line-height: 28px;
+}
+section .faq .wrap .faq_box .question_box .q,
+section .faq .wrap .faq_box .question_box .a,
+section .faq .wrap .faq_box .question_box .drop_button {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  background-position: center;
+}
+section .faq .wrap .faq_box .question_box .drop_button {
+  margin-left: auto;
+  cursor: pointer;
+}
+section .faq .wrap .faq_box .question_box .sentence {
+  margin: 1em 0;
+}
+section .faq .wrap .faq_box .question_box .question {
+  flex-grow: 1 10 1;
+  font-size: 20px;
+  color: #1b1d21;
+}
+section .faq .wrap .faq_box .question_box .question .q {
+  background: url(../image/icon_question.gif) no-repeat;
+}
+section .faq .wrap .faq_box .question_box .question .drop_button.close {
+  background: url(../image/icon_arrow_down.gif) no-repeat;
+}
+section .faq .wrap .faq_box .question_box .question .drop_button.open {
+  background: url(../image/icon_arrow_up.gif) no-repeat;
+}
+section .faq .wrap .faq_box .question_box .answer {
+  display: none;
+  font-size: 16px;
+  color: #60656e;
+  background-color: #f7f8fa;
+}
+section .faq .wrap .faq_box .question_box .answer .a {
+  background: url(../image/icon_answer.gif) no-repeat;
+}
+
+footer {
+  background-color: #e0e2eb;
+  color: #70757d;
+  font-size: 18px;
+  text-align: center;
+  height: 18px;
+  padding: 31px 0;
+}
+
+a {
+  z-index: 15;
+  position: fixed;
+  right: 10px;
+  bottom: 180px;
+  padding: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../image/go_top.gif);
+  background-position: center;
+}
+
+/*# sourceMappingURL=promotion.css.map */

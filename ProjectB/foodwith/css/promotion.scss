@@ -1,0 +1,264 @@
+body {
+  padding: 0;
+  margin: 0;
+  div {
+    margin: 0;
+  }
+}
+.blind {
+  /* 레이아웃에 영향을 끼치지 않도록 */
+  position: absolute;
+
+  /* 스크린 리더가 읽을 수 있도록 */
+  width: 1px;
+  height: 1px;
+
+  /* 눈에 보이는 부분을 제거 */
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+}
+header {
+  z-index: 5;
+  height: 44px;
+  width: 100%;
+  background: rgb(64, 64, 64);
+  opacity: 0.75;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  img {
+    margin: 11px 200px 11px;
+  }
+}
+
+$fruits: (apple, onion, banana, kiwi, broccoli, lemon, garlic, tomato);
+section {
+  width: 100%;
+  .invite {
+    background: url(../image/section_invite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    height: 750px;
+  }
+  .creator {
+    background: url(../image/section_creator.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #f9939d;
+    height: 822px;
+  }
+  .store {
+    background: url(../image/section_store.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #d5e43f;
+    height: 1084px;
+    ul {
+      display: flex;
+      flex-basis: 230px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      width: 980px;
+      height: 740px;
+      margin: auto;
+      padding: 300px 0 0;
+      list-style-type: none;
+      li {
+        width: 230px;
+        height: 370px;
+        .fruit_thumbnail {
+          position: relative;
+          border-radius: 10px;
+          width: 230px;
+          height: 230px;
+          color: #fff;
+          .fruit_image,
+          .fruit_text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+          }
+          .fruit_image {
+            z-index: 1;
+          }
+          @each $fruit in $fruits {
+            .#{$fruit} {
+              background: url("../image/thumbnail_#{$fruit}.jpg") no-repeat;
+            }
+          }
+          .fruit_text {
+            z-index: 2;
+            background-color: rgb(96, 132, 2);
+            opacity: 0;
+            .sale {
+              margin-top: 60px;
+              display: inline-block;
+              font-size: 65px;
+            }
+            .time {
+              display: inline-block;
+              font-size: 20px;
+            }
+            &:hover,
+            &:focus {
+              opacity: 0.9;
+            }
+          }
+        }
+        .item {
+          height: 110px;
+          padding: 0 10px;
+          font-size: 20px;
+          color: #1b1d21;
+          .name {
+            margin-top: 30px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            overflow: hidden;
+          }
+          .price {
+            display: block;
+            span {
+              font-size: 28px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .recipe {
+    background-color: #b893f9;
+    height: 1030px;
+    text-align: center;
+    a {
+      position: relative;
+      top: -365px;
+      z-index: 3;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 30px 25px;
+      border-radius: 10px;
+      color: #000;
+      width: 250px;
+      height: 31px;
+      background-color: rgb(213, 66, 233);
+      cursor: grab;
+      &:hover {
+        background-color: yellow;
+        color: navy;
+      }
+    }
+    .recipe_content {
+      position: relative;
+      z-index: 2;
+      top: -80px;
+      background: url(../image/section_recipe.png) no-repeat;
+      background-position: center;
+      height: 100%;
+    }
+    .recipe_pattern {
+      position: relative;
+      top: -610px;
+      z-index: 1;
+      background-image: url(../image/pattern_recipe.png);
+      height: 185px;
+    }
+  }
+  .faq {
+    background-color: #fff;
+    .wrap {
+      width: 980px;
+      margin: auto;
+      padding: 50 0 100 0;
+      h2 {
+        text-align: center;
+        font-size: 40px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      .faq_box {
+        .question_box {
+          border-top: 1px solid #a1a5ad;
+          border-bottom: 1px solid #a1a5ad;
+
+          .question,
+          .answer {
+            display: flex;
+            align-items: flex-start;
+            line-height: 28px;
+          }
+          .q,
+          .a,
+          .drop_button {
+            width: 25px;
+            height: 25px;
+            margin: 20px;
+            background-position: center;
+          }
+          .drop_button {
+            margin-left: auto;
+            cursor: pointer;
+          }
+          .sentence {
+            // width: 90%;
+            margin: 1em 0;
+          }
+          .question {
+            flex-grow: 1 10 1;
+            font-size: 20px;
+            color: #1b1d21;
+            .q {
+              background: url(../image/icon_question.gif) no-repeat;
+            }
+            .drop_button.close {
+              background: url(../image/icon_arrow_down.gif) no-repeat;
+            }
+            .drop_button.open {
+              background: url(../image/icon_arrow_up.gif) no-repeat;
+            }
+          }
+          .answer {
+            display: none;
+            font-size: 16px;
+            color: #60656e;
+            background-color: #f7f8fa;
+            .a {
+              background: url(../image/icon_answer.gif) no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: #e0e2eb;
+  color: #70757d;
+  font-size: 18px;
+  text-align: center;
+  height: 18px;
+  padding: 31px 0;
+}
+a {
+  z-index: 15;
+  position: fixed;
+  right: 10px;
+  bottom: 180px;
+  padding: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../image/go_top.gif);
+  background-position: center;
+}

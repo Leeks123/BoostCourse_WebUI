@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        text-align: center;
+        /* min-width: 800px; */
+        height: 100%;
+      }
+      header {
+        height: 100px;
+        background-color: lightblue;
+      }
+      .container {
+        position: relative;
+        width: 800px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .container:after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+      section {
+        height: 600px;
+        width: 500px;
+        background-color: lightcoral;
+        float: left;
+      }
+      aside {
+        height: 300px;
+        width: 300px;
+        background-color: lightgray;
+        float: left;
+      }
+      aside:after {
+        /* 구분선 만들기 */
+        content: "";
+        position: absolute;
+        right: 300px;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #000;
+      }
+      footer {
+        height: 100px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>header</header>
+      <div class="container">
+        <section>contents</section>
+        <aside>aside</aside>
+      </div>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
