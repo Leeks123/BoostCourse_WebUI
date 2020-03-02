@@ -230,6 +230,121 @@ section {
     }
   }
 }
+section {
+  //view
+  background-color: #f0f0f0;
+  .cake {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 15px;
+  }
+  .creator {
+    padding: 15px 0;
+    margin: 0 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #c1c1c1;
+    table {
+      margin: 0;
+      text-align: left;
+      width: 100%;
+    }
+    tr {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+    th {
+      color: #767676;
+      font-weight: bold;
+    }
+    td {
+      color: #666;
+      .number {
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+  }
+  .recipe_desc {
+    padding: 15px;
+    h4 {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+    a {
+      color: #3b9a7b;
+    }
+    ol {
+      padding-left: 15px;
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  .recipe_table {
+    padding: 15px;
+    table {
+      width: 100%;
+      border: 1px solid #c1c1c1;
+      border-collapse: collapse;
+      table-layout: fixed;
+      word-break: break-all;
+      th,
+      td {
+        border: 1px solid #c1c1c1;
+        padding: 5px;
+      }
+      thead {
+        background-color: #eaeaea;
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+      }
+      tbody {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+  .recipe_img {
+    padding: 15px;
+    img {
+      width: 100%;
+    }
+    p {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  }
+}
+footer {
+  background-color: #fff;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 768px),
   screen and (min-height: 768px) and (orientation: landscape) {
   header {
@@ -462,119 +577,4 @@ section {
 }
 @media screen and (min-width: 320px),
   screen and (min-height: 320px) and (orientation: landscape) {
-}
-
-section {
-  //view
-  background-color: #f0f0f0;
-  .cake {
-    font-size: 28px;
-    color: #333;
-    font-weight: bold;
-    margin: 0;
-    padding-top: 30px;
-    padding-left: 15px;
-  }
-  .creator {
-    padding: 15px 0;
-    margin: 0 15px;
-    font-size: 14px;
-    border-bottom: 1px solid #c1c1c1;
-    table {
-      margin: 0;
-      text-align: left;
-      width: 100%;
-    }
-    tr {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    }
-    th {
-      color: #767676;
-      font-weight: bold;
-    }
-    td {
-      color: #666;
-      .number {
-        font-family: Tahoma, Geneva, Verdana, sans-serif;
-      }
-    }
-  }
-  .recipe_desc {
-    padding: 15px;
-    h4 {
-      font-size: 16px;
-      color: #333;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: #666;
-    }
-    a {
-      color: #3b9a7b;
-    }
-    ol {
-      padding-left: 15px;
-      margin: 0;
-      font-size: 14px;
-      color: #666;
-    }
-  }
-  .recipe_table {
-    padding: 15px;
-    table {
-      width: 100%;
-      border: 1px solid #c1c1c1;
-      border-collapse: collapse;
-      table-layout: fixed;
-      word-break: break-all;
-      th,
-      td {
-        border: 1px solid #c1c1c1;
-        padding: 5px;
-      }
-      thead {
-        background-color: #eaeaea;
-        font-size: 16px;
-        color: #333;
-        font-weight: bold;
-        text-align: left;
-      }
-      tbody {
-        font-size: 14px;
-        color: #666;
-      }
-    }
-  }
-  .recipe_img {
-    padding: 15px;
-    img {
-      width: 100%;
-    }
-    p {
-      font-size: 14px;
-      color: #666;
-      text-align: center;
-    }
-  }
-}
-footer {
-  background-color: #fff;
-  padding: 10px 15px;
-  font-size: 14px;
-  color: #333;
-  ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    li {
-      list-style: none;
-    }
-  }
-  p {
-    text-align: center;
-  }
 }

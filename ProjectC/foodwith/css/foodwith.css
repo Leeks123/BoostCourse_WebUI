@@ -229,6 +229,121 @@ section .notice table td {
   padding: 5px;
 }
 
+section {
+  background-color: #f0f0f0;
+}
+section .cake {
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 15px;
+}
+section .creator {
+  padding: 15px 0;
+  margin: 0 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #c1c1c1;
+}
+section .creator table {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+section .creator tr {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+section .creator th {
+  color: #767676;
+  font-weight: bold;
+}
+section .creator td {
+  color: #666;
+}
+section .creator td .number {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+section .recipe_desc {
+  padding: 15px;
+}
+section .recipe_desc h4 {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+section .recipe_desc p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+section .recipe_desc a {
+  color: #3b9a7b;
+}
+section .recipe_desc ol {
+  padding-left: 15px;
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+section .recipe_table {
+  padding: 15px;
+}
+section .recipe_table table {
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-break: break-all;
+}
+section .recipe_table table th,
+section .recipe_table table td {
+  border: 1px solid #c1c1c1;
+  padding: 5px;
+}
+section .recipe_table table thead {
+  background-color: #eaeaea;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+}
+section .recipe_table table tbody {
+  font-size: 14px;
+  color: #666;
+}
+section .recipe_img {
+  padding: 15px;
+}
+section .recipe_img img {
+  width: 100%;
+}
+section .recipe_img p {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+footer {
+  background-color: #fff;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+footer ul li {
+  list-style: none;
+}
+footer p {
+  text-align: center;
+}
+
 @media screen and (min-width: 768px), screen and (min-height: 768px) and (orientation: landscape) {
   header .menu {
     display: none;
@@ -451,120 +566,6 @@ section .notice table td {
     border-right: 1px solid #c1c1c1;
     padding: 5px;
   }
-}
-section {
-  background-color: #f0f0f0;
-}
-section .cake {
-  font-size: 28px;
-  color: #333;
-  font-weight: bold;
-  margin: 0;
-  padding-top: 30px;
-  padding-left: 15px;
-}
-section .creator {
-  padding: 15px 0;
-  margin: 0 15px;
-  font-size: 14px;
-  border-bottom: 1px solid #c1c1c1;
-}
-section .creator table {
-  margin: 0;
-  text-align: left;
-  width: 100%;
-}
-section .creator tr {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-section .creator th {
-  color: #767676;
-  font-weight: bold;
-}
-section .creator td {
-  color: #666;
-}
-section .creator td .number {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
-}
-section .recipe_desc {
-  padding: 15px;
-}
-section .recipe_desc h4 {
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-section .recipe_desc p {
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-section .recipe_desc a {
-  color: #3b9a7b;
-}
-section .recipe_desc ol {
-  padding-left: 15px;
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-section .recipe_table {
-  padding: 15px;
-}
-section .recipe_table table {
-  width: 100%;
-  border: 1px solid #c1c1c1;
-  border-collapse: collapse;
-  table-layout: fixed;
-  word-break: break-all;
-}
-section .recipe_table table th,
-section .recipe_table table td {
-  border: 1px solid #c1c1c1;
-  padding: 5px;
-}
-section .recipe_table table thead {
-  background-color: #eaeaea;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  text-align: left;
-}
-section .recipe_table table tbody {
-  font-size: 14px;
-  color: #666;
-}
-section .recipe_img {
-  padding: 15px;
-}
-section .recipe_img img {
-  width: 100%;
-}
-section .recipe_img p {
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-}
-
-footer {
-  background-color: #fff;
-  padding: 10px 15px;
-  font-size: 14px;
-  color: #333;
-}
-footer ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-}
-footer ul li {
-  list-style: none;
-}
-footer p {
-  text-align: center;
 }
 
 /*# sourceMappingURL=foodwith.css.map */
