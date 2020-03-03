@@ -49,35 +49,41 @@ section {
   .banner {
     padding: 20px 35px;
     background-color: #ffee02;
-    img {
-      width: 250px;
-      height: 180px;
-    }
-    .paragraph {
-      font-size: 22px;
-      color: #333;
-      line-height: 28px;
-
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      word-wrap: normal;
-      width: 100%;
-      overflow: hidden;
-    }
-    .profile {
+    text-align: center;
+    .wrap {
       text-align: center;
-      display: flex;
-      align-items: center;
       img {
-        width: 30px;
-        height: 30px;
-        border-radius: 30px;
-        margin-left: 60px;
+        width: 250px;
+        height: 180px;
       }
-      span {
-        font-size: 16px;
+      .paragraph {
+        font-size: 22px;
         color: #333;
-        padding-left: 10px;
+        line-height: 28px;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        width: 100%;
+        overflow: hidden;
+      }
+      .profile {
+        text-align: center;
+        display: flex;
+        width: 105px;
+        margin: 30px auto 10px;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+        }
+        div {
+          font-size: 16px;
+          color: #333;
+          padding: 7px 0 7px 10px;
+          height: 16px;
+        }
       }
     }
   }
@@ -171,11 +177,12 @@ section {
           &::placeholder {
             color: #acacac;
           }
+          width: 45%;
         }
         select {
           border: none;
           border-bottom: 1px solid #c1c1c1;
-          width: 106px;
+          width: 50%;
           background: url(../image/icon_arrow_email.png) no-repeat 95%;
           background-color: #fff;
         }
@@ -184,6 +191,7 @@ section {
         border: 1px solid #c1c1c1;
         margin-top: 10px;
         font-size: 16px;
+        width: 100%;
         &::placeholder {
           color: #acacac;
         }
@@ -361,17 +369,12 @@ footer {
     float: right;
     margin: 0;
     ul {
-      margin: 0;
-      padding: 0;
-      text-align: center;
       li {
         display: inline-block;
-        list-style: none;
         font-size: 18px;
         height: 18px;
         padding: 16px 10px;
         a {
-          text-decoration: none;
           color: #333;
         }
       }
@@ -384,72 +387,58 @@ footer {
       padding: 34px;
       background-color: #ffee02;
       height: 262px;
-      img {
-        float: right;
-        width: 350px;
-        height: 252px;
-      }
-      .paragraph {
-        position: relative;
-        left: 0;
-        top: 30px;
-        width: 350px;
-        float: left;
-        font-size: 32px;
-        color: #333;
-        line-height: 40px;
 
-        white-space: normal;
-        word-wrap: normal;
-        word-break: keep-all;
-      }
-      .profile {
+      .wrap {
+        height: 262px;
         display: flex;
-        float: left;
-        position: relative;
-        top: 75px;
-        left: 15px;
-
-        text-align: center;
-        align-items: center;
+        flex-flow: row-reverse;
+        justify-content: center;
         img {
-          width: 30px;
-          height: 30px;
-          border-radius: 30px;
-          margin-left: 0;
+          width: 350px;
+          height: 252px;
         }
-        span {
-          font-size: 16px;
-          color: #333;
-          padding-left: 10px;
+        .wrap_in_wrap {
+          width: 350px;
+          .paragraph {
+            width: 350px;
+            margin-top: 30px;
+            font-size: 32px;
+            color: #333;
+            line-height: 40px;
+
+            white-space: normal;
+            word-wrap: normal;
+            word-break: keep-all;
+          }
+          .profile {
+            display: flex;
+            float: left;
+            margin: 50px 0 10px 30px;
+
+            text-align: center;
+            align-items: center;
+            img {
+              margin-left: 0;
+            }
+          }
         }
       }
     }
     .recipes {
-      padding: 15px;
-      background-color: #f0f0f0;
+      padding: 34px;
       ul {
-        padding: 0;
-        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         li {
-          list-style: none;
-          width: 100%;
-          img {
-            width: 100%;
-            border: 1px solid rgba(#000, 0.1);
-          }
+          width: 340px;
           p {
-            font-size: 14px;
-            color: #333;
-            height: 14px;
-            margin: 13px 0 28px;
-            text-align: center;
-
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            word-wrap: normal;
-            width: 100%;
-            overflow: hidden;
+            font-size: 18px;
+            height: 18px;
+            margin: 16px 0 36px;
+          }
+          &:nth-child(odd) {
+            margin-right: 20px;
           }
         }
       }
@@ -471,93 +460,56 @@ footer {
       }
     }
     .message {
-      background-color: #f4f5f7;
-      padding: 30px 15px;
+      padding: 30px 34px;
       h2 {
-        text-align: center;
-        font-size: 22px;
-        color: #333;
-        margin: 0;
+        font-size: 30px;
       }
       p {
-        text-align: center;
-        font-size: 14px;
-        color: #333;
+        font-size: 18px;
       }
       form {
-        background-color: #fff;
-        padding: 25px;
-        margin: 0;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+        padding: 50px;
         button {
-          float: right;
-          border: 2px solid #bdbdbd;
-          background-color: #e9e9e9;
-          font-size: 11px;
-          color: #666;
+          font-size: 15px;
+        }
+        label {
+          font-size: 16px;
+          font-weight: bold;
+          color: #333;
         }
         #nickname {
-          margin-top: 10px;
-          font-size: 14px;
-          color: #333;
-          width: 100%;
-          border: none;
-          border-bottom: 1px solid #c1c1c1;
-          &::placeholder {
-            color: #acacac;
-          }
+          margin-top: 0px;
+          margin-bottom: 10px;
         }
         .email {
           margin-top: 10px;
+          margin-bottom: 10px;
           input {
-            border: none;
-            border-bottom: 1px solid #c1c1c1;
             &::placeholder {
+              font-size: 14px;
               color: #acacac;
             }
+            width: 46%;
           }
           select {
-            border: none;
-            border-bottom: 1px solid #c1c1c1;
-            width: 106px;
-            background: url(../image/icon_arrow_email.png) no-repeat 95%;
-            background-color: #fff;
+            width: 50%;
+            background: url(../image/icon_arrow_email.png) no-repeat 99%;
+            font-size: 14px;
+            color: #333;
           }
         }
         textarea {
-          border: 1px solid #c1c1c1;
-          margin-top: 10px;
-          font-size: 16px;
-          &::placeholder {
-            color: #acacac;
-          }
+          width: 100%;
         }
       }
     }
     .notice {
-      background-color: #f0f0f0;
-      padding: 15px;
       h5 {
-        font-size: 16px;
-        color: #333;
-        font-weight: bold;
-        margin: 0;
-      }
-      h5 > div {
-        display: flex;
-        justify-content: center;
-      }
-      p {
-        display: inline-block;
-        margin: 0;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-wrap: normal;
-        width: 80%;
-        overflow: hidden;
+        margin: 0 0 15px 0;
       }
       hr {
         border: 1px solid #c1c1c1;
+        margin: 15px 0;
       }
       table {
         color: #333;
@@ -574,7 +526,261 @@ footer {
       }
     }
   }
+
+  section {
+    //view
+    .cake {
+      font-size: 33px;
+    }
+    .creator {
+      margin: 15px;
+      tr {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+      }
+    }
+    .recipe_table {
+      table {
+        table-layout: auto;
+      }
+    }
+    .recipe_img {
+      text-align: center;
+      img {
+        width: 500px;
+      }
+    }
+  }
+  footer {
+    ul {
+      width: 360px;
+      margin: 0 auto;
+    }
+  }
 }
-@media screen and (min-width: 320px),
-  screen and (min-height: 320px) and (orientation: landscape) {
+@media screen and (min-width: 1024px),
+  screen and (min-height: 1024px) and (orientation: landscape) {
+  header {
+    height: 70px;
+    .wrap {
+      width: 988px;
+      height: 100%;
+      margin: 0 auto;
+      .logo {
+        float: left;
+        width: 114px;
+        height: 100%;
+        text-align: center;
+        img {
+          margin: 15px auto;
+          width: 175px;
+        }
+      }
+    }
+  }
+  nav {
+    position: absolute;
+    right: 105px;
+    top: 0;
+    display: block;
+    height: 70px;
+    float: right;
+    margin: 0;
+    ul {
+      li {
+        display: inline-block;
+        font-size: 22px;
+        height: 22px;
+        padding: 24px 10px;
+        a {
+          color: #333;
+        }
+        a:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  section {
+    // main-page
+    .banner {
+      position: relative;
+      padding: 34px;
+      background-color: #ffee02;
+      height: 428px; //
+
+      .wrap {
+        height: 420px; //
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: center;
+        align-items: center;
+        img {
+          //
+          width: 500px;
+          height: 360px;
+        }
+        .wrap_in_wrap {
+          width: 460px;
+          .paragraph {
+            width: 460px;
+            height: 156px;
+            margin-bottom: 40px;
+            font-size: 40px;
+            text-align: left;
+            color: #333;
+            line-height: 52px;
+
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-wrap: normal;
+            word-break: keep-all;
+          }
+          .profile {
+            margin-left: 0;
+            margin-top: 10px;
+            width: 120px;
+            div {
+              font-size: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+    .recipes {
+      padding: 34px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        width: 988px;
+        margin: 0 auto;
+        li {
+          box-sizing: border-box;
+          position: relative;
+          width: 316px;
+          height: 316px;
+          margin-bottom: 20px;
+          p {
+            display: none;
+            font-size: 18px;
+            width: 296px;
+            height: 18px;
+            padding: 21px 10px;
+            background-color: #fff;
+          }
+          &:hover {
+            img {
+              opacity: 0.3;
+            }
+            p {
+              border: 1px solid #fff;
+              display: block;
+              position: relative;
+              top: -78px;
+            }
+          }
+          &:nth-child(odd) {
+            margin-right: 0px;
+          }
+        }
+      }
+      .more {
+        width: 988px;
+        height: 60px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+        span {
+          font-size: 16px;
+          color: #333;
+          margin-left: 5px;
+        }
+      }
+    }
+    .message {
+      .wrap {
+        width: 988px;
+        margin: 20 auto;
+        display: flex;
+        background: url(../image/bg_pencil.png) no-repeat 90% 80%;
+        div {
+          width: 398px;
+          white-space: normal;
+          word-wrap: normal;
+          word-break: keep-all;
+          padding-top: 20px;
+          h2 {
+            font-size: 42px;
+            text-align: left;
+          }
+          p {
+            text-align: left;
+          }
+        }
+        form {
+          width: 590px;
+          padding: 40px 50px;
+          button {
+            border: 2px solid #bdbdbd;
+            padding: 5px 15px;
+          }
+
+          #nickname {
+            margin-top: 20px;
+          }
+          .email {
+            margin-right: 0;
+            width: 100%;
+            input {
+              margin-top: 20px;
+              width: 45%;
+            }
+          }
+          select {
+            width: 45%;
+          }
+          textarea {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    .notice {
+      .wrap {
+        width: 988px;
+        margin: 0 auto;
+        span {
+          float: right;
+        }
+        hr {
+          margin: 30px 0;
+        }
+      }
+    }
+  }
+
+  section {
+    //view
+    .wrap {
+      width: 988px;
+      margin: 0 auto;
+      .cake {
+        font-size: 36px;
+      }
+      .recipe_img {
+        text-align: center;
+        img {
+          width: 600px;
+        }
+      }
+    }
+  }
 }
